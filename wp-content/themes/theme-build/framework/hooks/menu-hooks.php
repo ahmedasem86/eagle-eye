@@ -90,7 +90,7 @@ function nav_menu_args($args = '') {
     $nav_menu_args = [];
     $nav_menu_args['container'] = false;
     if (!$args['items_wrap']) {
-        $nav_menu_args['items_wrap'] = '<ul class="%2$s">%3$s</ul>';
+        $nav_menu_args['items_wrap'] = '<nav class="%2$s">%3$s</nav>';
     }
     if (!$args['depth']) {
         $nav_menu_args['depth'] = 2;

@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/wp-Content/themes/theme-build/dist/";
+/******/ 	__webpack_require__.p = "/wp-content/themes/theme-build/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 3);
@@ -118,7 +118,7 @@ module.exports = __webpack_require__(18);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* WEBPACK VAR INJECTION */(function(jQuery, $) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__autoload_bootstrap_js__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_Router__ = __webpack_require__(8);
@@ -168,7 +168,73 @@ var routes = new __WEBPACK_IMPORTED_MODULE_2__util_Router__["a" /* default */]({
 // Load Events
 jQuery(document).ready(function () { return routes.loadEvents(); });
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
+
+    $('#AdvanceSearch').click(function(){
+    if ($('.advanced-Search').css('visibility') =='hidden')
+    {
+        $('.advanced-Search').css('visibility', 'visible');
+        $('#asmaa').css('color' ,'#fff')
+        // $('#asmaa').css('transform' ,'rotateY(180deg)')
+    }
+    else{
+        $('.advanced-Search').css('visibility', 'hidden');
+        $('#asmaa').css('color' ,'#FFCC00')
+        // $('#asmaa').css('transform' ,'rotateY(360deg)')
+    }
+    });
+    $('.SearchTitles a:first-child').click(function(){
+
+        $('.SearchTitles a:first-child').addClass('active');
+        $('.SearchTitles a:nth-child(2)').removeClass('active');
+    })
+    $('.SearchTitles a:nth-child(2)').click(function(){
+
+        $('.SearchTitles a:first-child').removeClass('active');
+        $('.SearchTitles a:nth-child(2)').addClass('active');
+    })
+
+// **********************************************
+    $(window).scroll(function(){
+      var sticky = $('#hdr'),
+      sticky2=$('.SimpleHeader-Container'),
+      scroll = $(window).scrollTop(),
+      logo1 = $('#Logo_1'),
+      logo2 = $('#Logo_2'),
+      NotActive =$('nav a:not(.active)')
+
+      ;
+
+  if (scroll >= 600){
+        sticky.addClass('fixed');
+        sticky.css('border-bottom' , '1px solid black');
+        sticky.css('margin-top' , '37px');
+
+        sticky2.css('display','block');
+        sticky2.addClass('fixed-SimpleHeader');
+
+        logo1.css('display' , 'none') ;
+        logo2.css('display' , 'block') ;
+        NotActive.css('color' , '#000000');
+        logo2.css('width' , '30%') ;
+
+  }
+  else
+  {
+    sticky.removeClass('fixed');
+    sticky.css('border-bottom' , 'none');
+    sticky.css('margin-top' , '0');
+
+    sticky2.css('display','none');
+    sticky2.removeClass('fixed-SimpleHeader');
+
+    logo1.css('display' , 'block') ;
+    logo2.css('display' , 'none') ;
+    NotActive.css('color' , '#ffffff');
+
+  }
+});
+
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0), __webpack_require__(0)))
 
 /***/ }),
 /* 5 */

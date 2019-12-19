@@ -41,7 +41,7 @@ if( function_exists('acf_add_local_field_group') ):
 				),
 			),
 			array (
-				'return_format' => 'array',
+				'return_format' => 'url',
 				'preview_size' => 'thumbnail',
 				'library' => 'all',
 				'min_width' => '',

@@ -8,7 +8,7 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/wp-Content/themes/theme-build",
+  "publicPath": "/wp-content/themes/theme-build",
   "devUrl": "https://builder.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

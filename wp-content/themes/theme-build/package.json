@@ -56,7 +56,7 @@
     "imagemin-mozjpeg": "~7.0.0",
     "imagemin-webpack-plugin": "~2.2.0",
     "import-glob": "~1.5",
-    "node-sass": "~4.12.0",
+    "node-sass": "~4.13.0",
     "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
     "resolve-url-loader": "~2.3.1",
@@ -84,9 +84,10 @@
     "jquery": "^3.3.1",
     "lightgallery": "^1.6.8",
     "lightslider": "^1.1.6",
-    "popper.js": "^1.14.7",
     "magnific-popup": "^1.1.0",
+    "popper.js": "^1.14.7",
+    "slick-carousel": "^1.8.1",
     "wow.js": "^1.2.2",
-    "slick-carousel": "^1.8.1"
+    "yarn": "^1.21.1"
   }
 }
